@@ -1,3 +1,7 @@
 .container {
     max-width: 40rem;
 }
+
+progress[value]::-webkit-progress-value {
+    transition: all .3s ease-out;
+}
