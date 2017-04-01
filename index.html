@@ -21,7 +21,8 @@
                 <div class="columns is-mobile">
 
                     <div class="column has-text-centered">
-                        <progress class="progress is-large is-success" :value="playerHealth" :max="maxHealth"></progress>
+                        <progress class="progress is-large" :value="playerHealth" :max="maxHealth"
+                                  :class="playerHealthClass"></progress>
                         <h2 class="title is-5">You: {{ playerHealth }}</h2>
                     </div>
 
@@ -30,7 +31,8 @@
                     </div>
 
                     <div class="column has-text-centered">
-                        <progress class="progress is-large is-danger" :value="monsterHealth" :max="maxHealth"></progress>
+                        <progress class="progress is-large" :value="monsterHealth" :max="maxHealth"
+                                  :class="monsterHealthClass"></progress>
                         <h2 class="title is-5">Monster: {{ monsterHealth }}</h2>
                     </div>
 
