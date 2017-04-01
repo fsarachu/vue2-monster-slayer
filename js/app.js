@@ -53,6 +53,12 @@ new Vue({
             this.monsterHealth = this.performAttack(this.monsterHealth, maxPower);
             this.playerHealth = this.performAttack(this.playerHealth, maxPower);
         },
+        heal: function () {
+            var maxRecovery = 10;
+
+            this.monsterHealth = this.performHeal(this.monsterHealth, maxRecovery);
+            this.playerHealth = this.performHeal(this.playerHealth, maxRecovery);
+        },
         performAttack: function (health, maxPower) {
             var attackPower = Math.round(Math.random() * maxPower);
 
@@ -60,6 +66,17 @@ new Vue({
 
             if (health - attackPower < 0) {
                 health = 0;
+            }
+
+            return health;
+        },
+        performHeal: function (health, maxRecovery) {
+            var healRecovery = Math.round(Math.random() * maxRecovery);
+
+            health += healRecovery;
+
+            if (health > this.maxHealth) {
+                health = this.maxHealth;
             }
 
             return health;
