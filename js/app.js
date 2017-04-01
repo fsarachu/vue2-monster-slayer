@@ -37,5 +37,24 @@ new Vue({
 
             return className;
         }
+    },
+    methods: {
+        attack: function () {
+            var maxPower = 15;
+
+            this.monsterHealth = this.performAttack(this.monsterHealth, maxPower);
+            this.playerHealth = this.performAttack(this.playerHealth, maxPower);
+        }
+        performAttack: function (health, maxPower) {
+            var attackPower = Math.round(Math.random() * maxPower);
+
+            health -= attackPower;
+
+            if (health - attackPower < 0) {
+                health = 0;
+            }
+
+            return health;
+        }
     }
 });
