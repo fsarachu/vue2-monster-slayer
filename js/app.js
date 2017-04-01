@@ -4,7 +4,9 @@ new Vue({
         maxHealth: 100,
         minHealth: 0,
         playerHealth: 100,
-        monsterHealth: 100
+        monsterHealth: 100,
+        gameIsOver: false,
+        winner: ''
     },
     computed: {
         playerHealthClass: function () {
@@ -61,6 +63,23 @@ new Vue({
             }
 
             return health;
+        },
+        finishGame: function () {
+            this.gameIsOver = true;
+        }
+    },
+    watch: {
+        playerHealth: function (value) {
+            if (value <= this.minHealth) {
+                this.winner = 'Monster';
+                this.finishGame();
+            }
+        },
+        monsterHealth: function (value) {
+            if (value <= this.minHealth) {
+                this.winner = 'Player';
+                this.finishGame();
+            }
         }
     }
 });
