@@ -1,0 +1,23 @@
+{
+  "name": "vue2-monter-slayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsarachu/vue2-monter-slayer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fsarachu/vue2-monter-slayer/issues"
+  },
+  "homepage": "https://github.com/fsarachu/vue2-monter-slayer#readme",
+  "dependencies": {
+    "bulma": "^0.4.0",
+    "vue": "^2.2.6"
+  }
+}
