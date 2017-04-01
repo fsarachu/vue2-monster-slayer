@@ -46,7 +46,7 @@
 
             <div v-if="gameIsOver" class="container">
                 <h2 class="title is-2 has-text-centered">{{ winner }} Wins!</h2>
-                <button class="button is-primary is-large is-fullwidth">Start New Game</button>
+                <button @click="restart" class="button is-primary is-large is-fullwidth">Start New Game</button>
             </div>
 
             <div v-else class="container">

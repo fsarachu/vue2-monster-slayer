@@ -6,7 +6,7 @@ new Vue({
         playerHealth: 100,
         monsterHealth: 100,
         gameIsOver: false,
-        winner: ''
+        winner: null
     },
     computed: {
         playerHealthClass: function () {
@@ -61,6 +61,12 @@ new Vue({
         },
         giveUp: function () {
             this.playerHealth = this.minHealth;
+        },
+        restart: function () {
+            this.playerHealth = this.maxHealth;
+            this.monsterHealth = this.maxHealth;
+            this.gameIsOver = false;
+            this.winner = null;
         },
         performAttack: function (health, maxPower) {
             var attackPower = Math.round(Math.random() * maxPower);
