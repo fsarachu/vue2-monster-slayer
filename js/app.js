@@ -44,7 +44,13 @@ new Vue({
 
             this.monsterHealth = this.performAttack(this.monsterHealth, maxPower);
             this.playerHealth = this.performAttack(this.playerHealth, maxPower);
-        }
+        },
+        specialAttack: function () {
+            var maxPower = 30;
+
+            this.monsterHealth = this.performAttack(this.monsterHealth, maxPower);
+            this.playerHealth = this.performAttack(this.playerHealth, maxPower);
+        },
         performAttack: function (health, maxPower) {
             var attackPower = Math.round(Math.random() * maxPower);
 
