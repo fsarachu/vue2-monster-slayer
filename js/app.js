@@ -68,6 +68,7 @@ new Vue({
             this.monsterHealth = this.maxHealth;
             this.gameIsOver = false;
             this.winner = null;
+            this.logs = [];
         },
         performAttack: function (attacker, victim, maxPower) {
             var victimLower = victim.toLowerCase();
