@@ -54,7 +54,7 @@ new Vue({
             this.playerHealth = this.performAttack(this.playerHealth, maxPower);
         },
         heal: function () {
-            var maxRecovery = 10;
+            var maxRecovery = 25;
 
             this.monsterHealth = this.performHeal(this.monsterHealth, maxRecovery);
             this.playerHealth = this.performHeal(this.playerHealth, maxRecovery);
