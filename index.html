@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="column is-half-mobile">
-                        <button @click="heal" class="button is-success is-fullwidth">Heal</button>
+                        <button @click="heal" :disabled="isHealEnabled" class="button is-success is-fullwidth">Heal</button>
                     </div>
 
                     <div class="column is-half-mobile">

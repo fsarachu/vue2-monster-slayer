@@ -38,6 +38,9 @@ new Vue({
             }
 
             return className;
+        },
+        isHealEnabled: function () {
+            return (this.playerHealth == this.maxHealth || this.monsterHealth == this.maxHealth);
         }
     },
     methods: {
