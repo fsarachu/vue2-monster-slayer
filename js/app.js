@@ -73,8 +73,8 @@ new Vue({
 
             health -= attackPower;
 
-            if (health - attackPower < 0) {
-                health = 0;
+            if (health - attackPower < this.minHealth) {
+                health = this.minHealth;
             }
 
             return health;

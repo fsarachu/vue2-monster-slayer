@@ -5,3 +5,15 @@
 progress[value]::-webkit-progress-value {
     transition: all .3s ease-out;
 }
+
+.message:not(:last-child) {
+    margin-bottom: .5em;
+}
+
+.message-body {
+    padding: 0 1.25em;
+}
+
+.compact.hero-body {
+    padding: 1.5rem;
+}
