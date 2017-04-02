@@ -61,7 +61,8 @@
                     </div>
 
                     <div class="column is-half-mobile">
-                        <button @click="heal" :disabled="isHealEnabled" class="button is-success is-fullwidth">Heal</button>
+                        <button @click="heal" :disabled="isHealEnabled" class="button is-success is-fullwidth">Heal
+                        </button>
                     </div>
 
                     <div class="column is-half-mobile">
@@ -76,14 +77,9 @@
     <div class="hero">
         <div class="compact hero-body">
             <div class="container">
-                <div class="message is-success">
+                <div v-for="log in logs" :class="log.cssClass" class="message">
                     <div class="message-body">
-                        <p>Player hits Monster for 10</p>
-                    </div>
-                </div>
-                <div class="message is-danger">
-                    <div class="message-body">
-                        <p>Monster hits Player for 8</p>
+                        <p>{{ log.message }}</p>
                     </div>
                 </div>
             </div>
