@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <div class="hero">
+    <div class="hero" v-if="logs.length > 0">
         <div class="compact hero-body">
             <div class="container">
                 <div v-for="log in logs" :class="log.cssClass" class="message">
